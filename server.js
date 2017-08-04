@@ -23,10 +23,10 @@ var articleone = {
 };
 
 function createtemplate (data)  {
-    var title=data.title;
-    var heading=data.heading;
-     var date=data.date;
-    var content=data.content;
+    var title = data.title;
+    var heading = data.heading;
+     var date = data.date;
+    var content = data.content;
     
 var htmltemplate =
 `<html>
@@ -65,7 +65,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/Article-one', function (req, res) {
-  res.send(createtemplate(article-one));
+  res.send(createtemplate(articleone));
 });
 
 app.get('/Article-two', function (req, res) {
