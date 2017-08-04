@@ -7,8 +7,8 @@ app.use(morgan('combined'));
 
 
 var articleone = {
-    title: 'article one | harshit jindal',
-    heading: 'article one',
+    title: 'Article one | harshit jindal',
+    heading: 'Article one',
     date: 'Aug 3, 2017 6:25 pm',
     content: `<p>
             This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
@@ -63,8 +63,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function (req, res) {
-  res.send(createtemplate(articleone));
+app.get('/Article-one', function (req, res) {
+  res.send(createtemplate(Articleone));
 });
 
 app.get('/Article-two', function (req, res) {
