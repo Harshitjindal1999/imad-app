@@ -6,7 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleone = {
+var articles = {
+'articl-eone': {
     title: ' Article one | harshit jindal',
     heading: 'Article one',
     date: 'Aug 3, 2017 6:25 pm',
@@ -20,8 +21,38 @@ var articleone = {
                  <p>
             This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
                 </p>`
+},
+'article-two': {
+     title: ' Article two | harshit jindal',
+    heading: 'Article two',
+    date: 'Aug 4, 2017 6:55 pm',
+    content: 
+           `<p>
+            This s the content of my two article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
+                </p>
+                 <p>
+            This s the content of my two article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
+                </p>
+                 <p>
+            This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
+                </p>`
+},
+'article-three': {
+      title: ' Article three | harshit jindal',
+    heading: 'Article three',
+    date: 'Aug 4, 2017 6:55 pm',
+    content: 
+           `<p>
+            This s the content of my three article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
+                </p>
+                 <p>
+            This s the content of my two article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
+                </p>
+                 <p>
+            This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^. This s the content of my first article .i known how it is work but i will do because prof. hasura tell me ^^.
+                </p>`
+}
 };
-
 function createtemplate (data)  {
     var title = data.title;
     var heading = data.heading;
@@ -64,16 +95,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/Article-one', function (req, res) {
-  res.send(createtemplate(articleone));
-});
-
-app.get('/Article-two', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/Article-three', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articlename', function (req, res) {
+    //articlename == article-one
+    //articles[articlename] ==={} content object for article one
+  var articlename = req.params.articlename;
+  res.send(createtemplate(articles[articlename]));
 });
 
 app.get('/ui/style.css', function (req, res) {
