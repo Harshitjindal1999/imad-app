@@ -22,6 +22,6 @@ button.onclick = function () {
     
   //make the request
   
-     request.open('POST' ,'http://jindalharshit14.imad.hasura-app.io/counter', true);
+     request.open('get' ,'http://jindalharshit14.imad.hasura-app.io/counter', true);
      request.send(null);
 };
