@@ -128,7 +128,7 @@ app.get('/submit-name/:name', function (req, res) {
     
     names.push(name);
     //json: javascript oblect notation
-  res.send(JSON.stringfy(names));
+  res.send(JSON.stringify(names));
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
