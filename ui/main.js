@@ -11,7 +11,7 @@ button.onclick = function () {
        if(request.readystate === XMLHttpRequest.DONE) 
        {
     //take some action
-    if(request.status === 500) {
+    if(request.status === 200) {
         var counter = request.responseText;
             var span = document.getElementById("count");
       span.innerHTML = counter.toString();
@@ -22,6 +22,6 @@ button.onclick = function () {
     
   //make the request
   
-     request.open('GET' , 'http://jindalharshit14.imad.hasura-app.io/favicon.ico',  true);
+     request.open('GET' , 'http://jindalharshit14.imad.hasura-app.io/counter',  true);
      request.send(null);
 };
