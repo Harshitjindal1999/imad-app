@@ -6,9 +6,9 @@ var pool = require('pg').pool;
 var config={
   user: 'jindalharshit14',
   database: 'jindalharshit14',
-  password: 'process.emv.DB_PASSWORD',
    host: 'db.imad.hasura-app.io',
-  port: 80,
+  port: 5432,
+   password: 'process.emv.DB_PASSWORD',
 };
 
 var app = express();
