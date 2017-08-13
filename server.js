@@ -7,7 +7,7 @@ var pool = require('pg').pool;
   user: 'jindalharshit14',
   database: 'jindalharshit14',
    host: 'db.imad.hasura-app.io',
-  port: '5432',
+  port: '80',
    password: 'process.env.DB_PASSWORD'
 }; 
 
