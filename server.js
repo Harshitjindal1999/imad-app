@@ -104,7 +104,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-/*  var pool = new pool(config);
+  var pool = new pool(config);
 app.get('/test-db', function (req, res) {
  pool.query('SELECT * FROM test', function (err, result){
      if (err) {
@@ -114,7 +114,7 @@ app.get('/test-db', function (req, res) {
      }
  });
 });
-*/
+
 var counter = 0;
 app.get('/counter', function (req, res) {
   counter = counter + 1;
