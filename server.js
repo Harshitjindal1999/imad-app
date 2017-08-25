@@ -7,7 +7,7 @@ var pool = require('pool').pool;
   user: 'jindalharshit14',
   database: 'jindalharshit14',
    host: 'db.imad.hasura-app.io',
-  port: '5432',
+  port: '327',
    password: process.env.DB_PASSWORD
 }; 
 
